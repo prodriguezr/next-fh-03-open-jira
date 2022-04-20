@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 const HomePage: NextPage = () => {
   return (
-    <Typography variant='h1'>Hello, World!</Typography>
+    <Typography variant='h1' color='primary'>Hello, World!</Typography>
   );
 }
 
