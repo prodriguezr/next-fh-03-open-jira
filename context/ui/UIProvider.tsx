@@ -17,9 +17,14 @@ const UIProvider: FC<UIProviderProps> = ({ children }) => {
 
 	const [state, dispatch] = useReducer(uiReducer, UI_INITIAL_STATE);
 
+	const openSidebar = (): void => dispatch({ type: '[UI] - Open Sidebar' });
+	const closeSidebar = (): void => dispatch({ type: '[UI] - Close Sidebar' });
+
 	return (
 		<UIContext.Provider value={{
-			...state
+			...state,
+			openSidebar,
+			closeSidebar,
 		}}>
 			{children}
 		</UIContext.Provider>
